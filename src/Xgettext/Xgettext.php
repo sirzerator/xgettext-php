@@ -16,11 +16,10 @@ class Xgettext
         array $keywords = array('_'),
         $parser = 'javascript',
         $enc = 'UTF-8',
-        $cli = false,
+        public $cli = false,
         $noComments = false
     )
     {
-        $this->cli = $cli;
         $parser = 'Xgettext\\Parser\\' . ucfirst(strtolower($parser)) . 'Parser';
 
         if (empty($files)) {
